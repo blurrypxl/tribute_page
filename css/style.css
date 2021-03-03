@@ -1,0 +1,99 @@
+* {
+     margin: 0;
+     padding: 0;
+}
+
+#grid-container {
+    border: 3px solid lightblue;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-areas: 
+        'logo header header header'
+        'photo konten konten konten'
+        'footer footer footer footer';
+}
+
+#grid-container #logo-box { 
+    border: 3px solid lightpink;
+    grid-area: logo;
+    padding: 10px;
+}
+
+#logo-box img {
+    max-width: 100%;
+    width: 100px;
+    height: auto;
+}
+ 
+#grid-container #menus-box { 
+    border: 3px solid lightgreen;
+    grid-area: header;
+    align-self: center;
+    text-align: right;
+}
+
+#menus-box a {
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+/* Properti Grid-Item Photo-Box */
+#grid-container #photo-box { 
+    border: 3px solid red;
+    grid-area: photo;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#photo-box .card {
+    border: 2px solid black;
+    width: 250px;
+}
+
+.card .header-bg {
+    background-image: url(../images/bg-pattern-card.svg);
+}
+
+.header-bg img {
+    border: 2px solid cornsilk;
+    border-radius: 50%;
+    max-width: 100%;
+    width: 100px;
+    height: auto;
+}
+
+/* ============================ */
+
+#grid-container #article-box {
+    border: 3px solid yellow;
+    grid-area: konten;
+}
+
+#grid-container #footer-box { 
+    border: 3px solid blue;
+    grid-area: footer;
+}
+
+@media (max-width: 500px) {
+    #grid-container {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        grid-template-areas: 
+        'logo logo logo logo'
+        'header header header header'
+        'photo photo photo photo'
+        'konten konten konten konten'
+        'footer footer footer footer';
+    }
+
+    #grid-container #menus-box { 
+        text-align: center;
+    }
+
+    #grid-container #logo-box { 
+        padding: 5px;
+        text-align: center;
+    }
+}
