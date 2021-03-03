@@ -50,21 +50,38 @@
 
 #photo-box .card {
     border: 2px solid black;
-    width: 250px;
+    border-radius: 10px;
+    width: 100%;
 }
 
 .card .header-bg {
-    background-image: url(../images/bg-pattern-card.svg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://cdn.impactinit.com/cdn/x/x@7a079d8447/smss52/smsimg33/pv/isignstockcontributors/iss_27257_00128.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .header-bg img {
     border: 2px solid cornsilk;
     border-radius: 55%;
+    position: relative;
+    top: 45px;
     max-width: 100%;
     width: 100px;
     height: auto;
 }
 
+.card .header-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 45px;
+    padding: 20px;
+}
 /* ============================ */
 
 #grid-container #article-box {
