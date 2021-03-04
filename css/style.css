@@ -1,3 +1,7 @@
+:root {
+    --bg-nav: rgb(37, 31, 53);
+}
+
 * {
      margin: 0;
      padding: 0;
@@ -8,22 +12,23 @@ body {
 }
 
 #grid-container {
-    border: 3px solid lightblue;
+    /* border: 3px solid lightblue; */
     display: grid;
-    grid-gap: 10px;
+    /* grid-row-gap: 15px; */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-areas: 
+    grid-template-areas:
         'logo header header header'
         'photo konten konten konten'
         'footer footer footer footer';
 }
 
-#grid-container #logo-box { 
-    border: 3px solid lightpink;
+#grid-container #logo-box {
+    /* border: 3px solid lightpink; */
+    background-color: var(--bg-nav);
     grid-area: logo;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 15px 0;
 }
 
 #logo-box img {
@@ -31,22 +36,42 @@ body {
     width: 100px;
     height: auto;
 }
- 
-#grid-container #menus-box { 
-    border: 3px solid #90ee90;
+
+#grid-container #menus-box {
+    /* border: 3px solid #90ee90; */
+    background-color: var(--bg-nav);
+    padding: 2% 0;
     grid-area: header;
-    align-self: center;
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 #menus-box a {
-    padding: 0 10px;
+    border: 2px solid transparent;
+    margin: 0 2%;
+    padding: 10px 5px;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+#menus-box .active {
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+#menus-box a:hover {
+    border-bottom: 2px solid white;
+    border-radius: 2px;
 }
 
 /* Properti Grid-Item Photo-Box */
-#grid-container #photo-box { 
-    border: 3px solid red;
+#grid-container #photo-box {
+    /* border: 3px solid red; */
     grid-area: photo;
     padding: 20px;
     display: flex;
@@ -56,7 +81,7 @@ body {
 
 #photo-box .card {
     /* border: 1px solid rgb(221, 221, 221); */
-    border-radius: 20px;
+    border-radius: 10px;
     width: 100%;
     box-shadow: 0 5px 10px 5px rgb(236, 236, 236);
 }
@@ -130,7 +155,7 @@ body {
     grid-area: konten;
 }
 
-#grid-container #footer-box { 
+#grid-container #footer-box {
     border: 3px solid blue;
     grid-area: footer;
 }
@@ -138,7 +163,7 @@ body {
 @media (max-width: 500px) {
     #grid-container {
         grid-template-columns: repeat(1, minmax(200px, 1fr));
-        grid-template-areas: 
+        grid-template-areas:
         'logo logo logo logo'
         'header header header header'
         'photo photo photo photo'
@@ -146,12 +171,17 @@ body {
         'footer footer footer footer';
     }
 
-    #grid-container #menus-box { 
+    #grid-container #menus-box {
+        justify-content: center;
+    }
+
+    #grid-container #logo-box {
+        padding: 5px;
         text-align: center;
     }
 
-    #grid-container #logo-box { 
-        padding: 5px;
-        text-align: center;
+    #menus-box a {
+        margin: 0 1%;
+        font-size: 12px;
     }
 }
