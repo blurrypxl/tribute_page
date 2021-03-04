@@ -3,11 +3,15 @@
      padding: 0;
 }
 
+body {
+    font-family: rubik, sans-serif;
+}
+
 #grid-container {
     border: 3px solid lightblue;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-areas: 
         'logo header header header'
         'photo konten konten konten'
@@ -76,11 +80,38 @@
 }
 
 .card .header-name {
+    /* border: 2px solid black; */
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 45px;
     padding: 20px;
+}
+
+.header-name .name {
+    display: flex;
+    flex-direction: row;
+}
+
+.name h2, .name p {
+    text-transform: capitalize;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.header-name .recidence {
+    display: flex;
+    flex-direction: row;
+}
+
+.recidence p {
+    font-size: 14px;
+    padding: 5px 8px;
+}
+
+.card .content-card {
+    border-top: 1px solid rgb(207, 207, 207);
+    width: 100%;
 }
 /* ============================ */
 
