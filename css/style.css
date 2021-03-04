@@ -21,6 +21,8 @@ body {
 #grid-container #logo-box { 
     border: 3px solid lightpink;
     grid-area: logo;
+    display: flex;
+    justify-content: center;
     padding: 10px;
 }
 
@@ -31,14 +33,14 @@ body {
 }
  
 #grid-container #menus-box { 
-    border: 3px solid lightgreen;
+    border: 3px solid #90ee90;
     grid-area: header;
     align-self: center;
     text-align: right;
 }
 
 #menus-box a {
-    padding: 0 15px;
+    padding: 0 10px;
     text-decoration: none;
 }
 
@@ -53,9 +55,10 @@ body {
 }
 
 #photo-box .card {
-    border: 2px solid black;
-    border-radius: 10px;
+    /* border: 1px solid rgb(221, 221, 221); */
+    border-radius: 20px;
     width: 100%;
+    box-shadow: 0 5px 10px 5px rgb(236, 236, 236);
 }
 
 .card .header-bg {
@@ -66,7 +69,7 @@ body {
     background-image: url(https://cdn.impactinit.com/cdn/x/x@7a079d8447/smss52/smsimg33/pv/isignstockcontributors/iss_27257_00128.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-attachment: local;
 }
 
 .header-bg img {
@@ -106,12 +109,19 @@ body {
 
 .recidence p {
     font-size: 14px;
-    padding: 5px 8px;
+    padding: 5px;
 }
 
 .card .content-card {
-    border-top: 1px solid rgb(207, 207, 207);
-    width: 100%;
+    border-top: 1px solid rgb(221, 221, 221);
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+}
+
+.content-card h3, .content-card p {
+    font-size: 15px;
+    padding: 10px;
 }
 /* ============================ */
 
