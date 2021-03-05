@@ -1,5 +1,6 @@
 :root {
-    --bg-nav: rgb(37, 31, 53);
+    --bg-nav: rgb(37, 31, 53); /* Color Nav */
+    --bg-header-card: rgb(65, 58, 83); /* Color Header Card */
 }
 
 * {
@@ -61,12 +62,14 @@ body {
 
 #menus-box .active {
     border: 2px solid white;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 #menus-box a:hover {
     border-bottom: 2px solid white;
     border-radius: 2px;
+    background-color: white;
+    color: var(--bg-nav);
 }
 
 /* Properti Grid-Item Photo-Box */
@@ -91,15 +94,16 @@ body {
     border-top-right-radius: 10px;
     display: flex;
     justify-content: center;
-    background-image: url(https://cdn.impactinit.com/cdn/x/x@7a079d8447/smss52/smsimg33/pv/isignstockcontributors/iss_27257_00128.jpg);
+    /* background-image: url(https://cdn.impactinit.com/cdn/x/x@7a079d8447/smss52/smsimg33/pv/isignstockcontributors/iss_27257_00128.jpg); */
+    background-color: var(--bg-header-card);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: local;
 }
 
 .header-bg img {
-    border: 2px solid cornsilk;
-    border-radius: 55%;
+    /* border: 5px solid rgb(252, 252, 252); */
+    border-radius: 50%;
     position: relative;
     top: 45px;
     max-width: 100%;
@@ -158,6 +162,18 @@ body {
 #grid-container #footer-box {
     border: 3px solid blue;
     grid-area: footer;
+}
+
+#footer-box #footer-nav a {
+    /* border: 3px solid orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1% 10%;
+}
+
+#footer-box #copyright {
+    text-align: right;
 }
 
 @media (max-width: 500px) {
