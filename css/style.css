@@ -89,26 +89,28 @@ body {
     box-shadow: 0 5px 10px 5px rgb(236, 236, 236);
 }
 
-#card #img-div {
+#card #photo-div {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* background-color: var(--bg-header-card); */
 }
 
-#img-div p {
+#photo-div p {
     font-size: 14px;
     text-transform: capitalize;
     padding: 20px;
 }
 
-#img-div #image {
+#photo-div #image {
+    /* border: 2px solid black; */
     /* position: relative;
-    top: 60px; */
+    top: 15px; */
     border-radius: 50%;
     max-width: 100%;
     width: 200px;
     height: auto;
+    margin: 20px;
 }
 
 #card #title-div {
@@ -123,6 +125,10 @@ body {
 #title-div .name {
     display: flex;
     flex-direction: row;
+}
+
+.name h2 {
+    color: rgb(46, 46, 46);
 }
 
 .name h2, .name p {
@@ -148,24 +154,45 @@ body {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
 }
 
+#content h3 {
+    color:rgb(46, 46, 46);
+}
+
 #content h3, #content p {
+    text-transform: capitalize;
     font-size: 15px;
     padding: 10px;
 }
 /* ============================ */
 
-#main #article-box {
-    border: 3px solid yellow;
+/* Properti Grid-Item Tribute-Info */
+#main #tribute-info {
+    /* border: 3px solid yellow; */
+    border-top: 1px solid rgb(221, 221, 221);
     grid-area: konten;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px
 }
 
-#main #footer-box {
-    border: 3px solid blue;
+#img-div #image{
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+}
+/* ============================ */
+#main #footer-div {
+    /* border: 3px solid blue; */
+    background: var(--bg-nav);
     grid-area: footer;
+    position: relative;
+    top: 100%;
+    width: 100%;
 }
 
-#footer-box #footer-nav {
-    border: 3px solid orange;
+#footer-div #footer-nav {
+    /* border: 3px solid orange; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -176,8 +203,9 @@ body {
     margin: 1% 0;
 }
 
-#footer-box #copyright {
+#footer-div #copyright {
     text-align: right;
+    padding: 10px;
 }
 
 @media (max-width: 500px) {
