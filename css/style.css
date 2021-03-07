@@ -12,7 +12,7 @@ body {
     font-family: rubik, sans-serif;
 }
 
-#grid-container {
+#main {
     /* border: 3px solid lightblue; */
     display: grid;
     /* grid-row-gap: 15px; */
@@ -23,7 +23,7 @@ body {
         'footer footer footer footer';
 }
 
-#grid-container #logo-box {
+#main #logo-box {
     /* border: 3px solid lightpink; */
     background-color: var(--bg-nav);
     grid-area: logo;
@@ -38,7 +38,7 @@ body {
     height: auto;
 }
 
-#grid-container #menus-box {
+#main #menus-box {
     /* border: 3px solid #90ee90; */
     background-color: var(--bg-nav);
     padding: 2% 0;
@@ -73,7 +73,7 @@ body {
 }
 
 /* Properti Grid-Item Photo-Box */
-#grid-container #photo-box {
+#main #photo-box {
     /* border: 3px solid red; */
     grid-area: photo;
     padding: 20px;
@@ -82,45 +82,45 @@ body {
     align-items: center;
 }
 
-#photo-box .card {
+#photo-box #card {
     /* border: 1px solid rgb(221, 221, 221); */
     border-radius: 10px;
     width: 100%;
     box-shadow: 0 5px 10px 5px rgb(236, 236, 236);
 }
 
-.card .header-bg {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+#card #img-div {
     display: flex;
-    justify-content: center;
-    /* background-image: url(https://cdn.impactinit.com/cdn/x/x@7a079d8447/smss52/smsimg33/pv/isignstockcontributors/iss_27257_00128.jpg); */
-    background-color: var(--bg-header-card);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: local;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: var(--bg-header-card); */
 }
 
-.header-bg img {
-    /* border: 5px solid rgb(252, 252, 252); */
+#img-div p {
+    font-size: 14px;
+    text-transform: capitalize;
+    padding: 20px;
+}
+
+#img-div #image {
+    /* position: relative;
+    top: 60px; */
     border-radius: 50%;
-    position: relative;
-    top: 45px;
     max-width: 100%;
-    width: 100px;
+    width: 200px;
     height: auto;
 }
 
-.card .header-name {
+#card #title-div {
     /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 45px;
+    /* margin-top: 45px; */
     padding: 20px;
 }
 
-.header-name .name {
+#title-div .name {
     display: flex;
     flex-direction: row;
 }
@@ -131,7 +131,7 @@ body {
     padding: 5px;
 }
 
-.header-name .recidence {
+#title-div .recidence {
     display: flex;
     flex-direction: row;
 }
@@ -141,35 +141,39 @@ body {
     padding: 5px;
 }
 
-.card .content-card {
+#card #content {
     border-top: 1px solid rgb(221, 221, 221);
     padding: 10px 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
 }
 
-.content-card h3, .content-card p {
+#content h3, #content p {
     font-size: 15px;
     padding: 10px;
 }
 /* ============================ */
 
-#grid-container #article-box {
+#main #article-box {
     border: 3px solid yellow;
     grid-area: konten;
 }
 
-#grid-container #footer-box {
+#main #footer-box {
     border: 3px solid blue;
     grid-area: footer;
 }
 
-#footer-box #footer-nav a {
-    /* border: 3px solid orange; */
+#footer-box #footer-nav {
+    border: 3px solid orange;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1% 10%;
+    padding: 0 13%;
+}
+
+#footer-nav a {
+    margin: 1% 0;
 }
 
 #footer-box #copyright {
@@ -177,7 +181,7 @@ body {
 }
 
 @media (max-width: 500px) {
-    #grid-container {
+    #main {
         grid-template-columns: repeat(1, minmax(200px, 1fr));
         grid-template-areas:
         'logo logo logo logo'
@@ -187,11 +191,11 @@ body {
         'footer footer footer footer';
     }
 
-    #grid-container #menus-box {
+    #main #menus-box {
         justify-content: center;
     }
 
-    #grid-container #logo-box {
+    #main #logo-box {
         padding: 5px;
         text-align: center;
     }
