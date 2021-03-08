@@ -1,6 +1,6 @@
 :root {
     --bg-nav: rgb(37, 31, 53); /* Color Nav */
-    --bg-header-card: rgb(65, 58, 83); /* Color Header Card */
+    --shadow-box: 0 5px 10px 5px rgb(223, 223, 223);
 }
 
 * {
@@ -85,11 +85,13 @@ body {
 #photo-box #card {
     /* border: 1px solid rgb(221, 221, 221); */
     border-radius: 10px;
-    width: 100%;
-    box-shadow: 0 5px 10px 5px rgb(236, 236, 236);
+    /* position: fixed; */
+    /* width: 100%; */
+    box-shadow: var(--shadow-box);
 }
 
 #card #photo-div {
+    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,7 +110,7 @@ body {
     top: 15px; */
     border-radius: 50%;
     max-width: 100%;
-    width: 200px;
+    width: 150px;
     height: auto;
     margin: 20px;
 }
@@ -119,7 +121,7 @@ body {
     flex-direction: column;
     align-items: center;
     /* margin-top: 45px; */
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 #title-div .name {
@@ -171,17 +173,44 @@ body {
     border-top: 1px solid rgb(221, 221, 221);
     grid-area: konten;
     display: flex;
+    padding: 20px
+}
+
+#tribute-info #tribute-box {
+    /* border: 3px solid wheat; */
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: var(--shadow-box);
+}
+
+#tribute-box #img-div {
+    /* border: 3px solid salmon; */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px
+    padding: 20px;
 }
 
 #img-div #image{
     max-width: 100%;
-    width: 500px;
+    width: 650px;
     height: auto;
 }
+
+#img-div #image-caption {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+}
+
+#tribute-box #content-article {
+    /* border: 3px solid chartreuse; */
+    text-align: justify;
+    padding: 0 3%;
+    padding-bottom: 5vh;
+}
 /* ============================ */
+
 #main #footer-div {
     /* border: 3px solid blue; */
     background: var(--bg-nav);
