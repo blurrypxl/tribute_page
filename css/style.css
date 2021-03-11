@@ -32,11 +32,20 @@ body {
     padding: 15px 0;
 }
 
-#logo-box img {
+#logo-box p {
+    border: 5px solid white;
+    border-radius: 20%;
+    padding: 0 4%;
+    font-weight: 700;
+    font-size: 52px;
+    color: white;
+}
+
+/* #logo-box img {
     max-width: 100%;
     width: 100px;
     height: auto;
-}
+} */
 
 #main #menus-box {
     /* border: 3px solid #90ee90; */
@@ -60,12 +69,12 @@ body {
     color: white;
 }
 
-#menus-box .active {
+/* #menus-box .active {
     border: 2px solid white;
     border-radius: 2px;
-}
+} */
 
-#menus-box a:hover {
+#menus-box a:hover, #menus-box .active{
     border-bottom: 2px solid white;
     border-radius: 2px;
     background-color: white;
@@ -259,7 +268,7 @@ body {
 
 #copyright img {
     max-width: 100%;
-    width: 30px;
+    width: 32px;
     height: auto;
     padding: 10px;
 }
