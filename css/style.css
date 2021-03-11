@@ -1,5 +1,5 @@
 :root {
-    --bg-nav: rgb(37, 31, 53); /* Color Nav */
+    --bg-nav: #77da3d; /* Color Nav */
     --shadow-box: 0 3px 4px 1px rgb(214, 214, 214);
 }
 
@@ -246,11 +246,11 @@ body {
 }
 
 #footer-div #footer-nav {
-    /* border: 3px solid orange; */
+    border: 3px solid orange;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 5%;
+    padding: 20px 0 0 5%;
 }
 
 #footer-nav a {
